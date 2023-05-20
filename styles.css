@@ -1,0 +1,65 @@
+body{
+    background: rgb(255,157,8);
+    background: radial-gradient(circle, rgba(255,157,8,1) 0%, rgba(155,187,255,1) 100%);    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+main{
+    width: 730px;  
+    margin: 100px auto 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.tarjetas{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0 10px 10px 10px;
+    border-radius: 8px;
+}
+h1{
+    text-align: center;
+}
+button{
+    height: 100px;    
+    width: 100px;
+    background-color: rgba(50, 98, 187, 0.781);
+    border-radius: 10%;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgba(216, 185, 99, 0.981);
+    color: rgb(252, 176, 36);
+    cursor: pointer;
+}
+
+.seccion_estadisticas{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%; 
+    width: 250px;
+    height: 400px;
+    padding: 0 20px;
+
+}
+
+.estadisticas{
+    border: 1px solid white;
+    height: 105px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+}
+
+footer{
+    text-align: center;
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+}
