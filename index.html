@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="wdth=device-width, initial-scale=0.1">
+    <link rel="stylesheet" href="css/styles.css">
     <title>MetroMemory</title>
 </head>
 <body>
     <main>
-        <section class="tarjetas"></section>
-        <h1>Memoriza las tarjetas</h1>
-        <table>
-            <tr>
-                <td><button id="0">hola</td>
-                <td><button id="1">hola</td>
-                <td><button id="2">hola</td>
-                <td><button id="3">hola</td>
-            </tr>
-            <tr>
-                <td><button id="4">hola</td>
-                <td><button id="5">hola</td>
-                <td><button id="6">hola</td>
-                <td><button id="7">hola</td>
-            </tr>
-            <tr>
-                <td><button id="8">hola</td>
-                <td><button id="9">hola</td>
-                <td><button id="10">hola</td>
-                <td><button id="11">hola</td>
-            </tr>
-            <tr>
-                <td><button id="12">hola</td>
-                <td><button id="13">hola</td>
-                <td><button id="14">hola</td>
-                <td><button id="15">hola</td>
-            </tr>
-        </table>
-        <section class="estadisticas"></section>
+        <section class="tarjetas">
+            <h1>Memoriza las tarjetas</h1>
+            <table>
+                <tr>
+                    <td><button id="0" onclick="destapar(0)"></td>
+                    <td><button id="1" onclick="destapar(1)"></td>
+                    <td><button id="2" onclick="destapar(2)"></td>
+                    <td><button id="3" onclick="destapar(3)"></td>
+                </tr>
+                <tr>
+                    <td><button id="4" onclick="destapar(4)"></td>
+                    <td><button id="5" onclick="destapar(5)"></td>
+                    <td><button id="6" onclick="destapar(6)"></td>
+                    <td><button id="7" onclick="destapar(7)"></td>
+                </tr>
+                <tr>
+                    <td><button id="8" onclick="destapar(8)"></td>
+                    <td><button id="9" onclick="destapar(9)"></td>
+                    <td><button id="10" onclick="destapar(10)"></td>
+                    <td><button id="11" onclick="destapar(11)"></td>
+                </tr>
+                <tr>
+                    <td><button id="12" onclick="destapar(12)"></td>
+                    <td><button id="13" onclick="destapar(13)"></td>
+                    <td><button id="14" onclick="destapar(14)"></td>
+                    <td><button id="15" onclick="destapar(15)"></td>
+                </tr>
+            </table>
+        </section>
+        <section class="seccion_estadisticas">
+            <div id="buenas" class="estadisticas">👍Buenas: 0</div>
+            <div id="t-180"class="estadisticas">🕰️Tiempo: 180 segundos</div>
+            <div id="turnos" class="estadisticas">🎫Turnos: 0</div>
+        </section>
     </main>
+    <footer>
+
+        <p>Desarrollado por 🙌 <a href="https://github.com/andrescarcia">Andre Scarcia 🐧</a></p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 
 
