@@ -27,7 +27,7 @@ button{
     background-color: rgba(50, 98, 187, 0.781);
     border-radius: 10%;
     font-size: 40px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -42,7 +42,7 @@ button:hover{
     border-top-right-radius: 2%;
     border-bottom-right-radius: 2%; 
     width: 250px;
-    height: 400px;
+    height: 450px;
     padding: 0 20px;
 
 }
@@ -62,4 +62,8 @@ footer{
 
 a{
     text-decoration: none;
+}
+
+img{
+    width: 100%;
 }
