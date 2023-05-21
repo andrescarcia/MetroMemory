@@ -57,6 +57,11 @@ function bloquearTarjetas(){
         tarjetaBloqueada.disabled = true;
     }
 }
+//funcion de reiniciar la pagina
+function reiniciar(){
+    window.location.reload();
+}
+
 //funcion principal
 function destapar(id){
 
@@ -106,7 +111,7 @@ function destapar(id){
                     winAudio.play();
                     //terminar juego
                     // calcula puntuacion
-                    puntuacion = 100-(timer/timerInicial)
+                    puntuacion = 100*(timer/timerInicial)
                     clearInterval(tiempoRegresivoId);
                     mostarBuenas.innerHTML = `Buenas: ${buenas}👌🎶`;
                     mostrarTiempo.innerHTML = `SUPER MAN! LO LOGRASTE EN ${timerInicial - timer} SEGUNDOS 🎉🎉🎉`;

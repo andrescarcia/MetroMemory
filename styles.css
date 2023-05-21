@@ -39,15 +39,17 @@ button:hover{
 
 .seccion_estadisticas{
     background-color: rgba(255, 255, 255, 0.2);
-    border-top-right-radius: 2%;
-    border-bottom-right-radius: 2%; 
+    border-radius: 10px;
     width: 250px;
-    height: 450px;
-    padding: 0 20px;
+    height: 550px;
+    padding: 10px;
 
 }
 
 .estadisticas{
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
     border: 1px solid white;
     height: 105px;
     border-radius: 8px;
@@ -66,4 +68,19 @@ a{
 
 img{
     width: 100%;
+}
+
+#boton_reiniciar{
+    background-color:  rgba(50, 98, 187, 0.781);
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: x-large;
+    margin: 0 auto;
+    display: block;
+    width: 250px;
+    text-align: center;
 }
