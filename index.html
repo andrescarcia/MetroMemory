@@ -43,7 +43,7 @@
         </section>
         <section class="seccion_estadisticas">
             <div id="buenas" class="estadisticas">👍Buenas: 0</div>
-            <div id="t-180"class="estadisticas">🕰️Tiempo: 180 segundos</div>
+            <div id="t-180"class="estadisticas">⏳Tiempo: 180 segundos</div>
             <div id="turnos" class="estadisticas">🎫Turnos: 0</div>
             <div id ="puntuacion" class="estadisticas">🏆Puntuación: 0</div>
             <div>
@@ -51,8 +51,22 @@
             </div>
         </section>
     </main>
+    <div>
+        <button id ="ver_scores" onclick="displayScores()">Ver Scores📝</button>
+    </div>
+    <table>
+    <thead>
+        <tr>
+        <th>Rank</th>
+        <th>Nombre</th>
+        <th>Puntuación</th>
+        </tr>
+    </thead>
+    <tbody id="scoreTable">
+        <!-- filas de la tabla se agregarán aquí mediante JavaScript -->
+    </tbody>
+    </table>
     <footer>
-
         <p>Desarrollado por 🙌 <a href="https://github.com/andrescarcia">Andre Scarcia 🐧</a></p>
     </footer>
     <script src="main.js"></script>

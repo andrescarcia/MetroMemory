@@ -11,6 +11,10 @@ let timer = 180;
 let tiempoRegresivoId = null;
 let timerInicial = 180;
 let puntuacion = 0;
+let userName = "";
+
+requestUserName();
+
 
 // apuntadores  a los elementos del html    
 let mostrarMovimientos = document.getElementById("turnos");
@@ -33,8 +37,21 @@ y estos seran el parametro para el metodo sort dandonos un arreglo de numeros or
 */
 numeros = numeros.sort(()=>{return Math.random()-0.5});
 
+
 console.log(numeros);
 // funciones
+function requestUserName() {
+    userName = prompt("Por favor, ingresa tu nombre de usuario:");
+    if (userName === null || userName.trim() === "") {
+    requestUserName();
+    }
+}
+function saveScore() {
+    let scores = JSON.parse(localStorage.getItem("scores")) || [];
+    scores.push({ name: userName, score: puntuacion });
+    localStorage.setItem("scores", JSON.stringify(scores));
+}
+
 function contarTiempo(){
     tiempoRegresivoId = setInterval(()=>{
         timer--;
@@ -43,6 +60,7 @@ function contarTiempo(){
             clearInterval(tiempoRegresivoId);
             bloquearTarjetas();
             loseAudio.play();
+            alert("Perdiste, se un poco mas rapido la proxima vez😅");
         }
     },1000);
 }
@@ -57,6 +75,30 @@ function bloquearTarjetas(){
 //funcion de reiniciar la pagina
 function reiniciar(){
     window.location.reload();
+}
+
+function displayScores() {
+let scores = JSON.parse(localStorage.getItem("scores")) || [];
+scores.sort((a, b) => b.score - a.score);
+
+let scoreTable = document.getElementById("scoreTable");
+scoreTable.innerHTML = "";
+
+scores.forEach((score, index) => {
+    let row = document.createElement("tr");
+    let rankCell = document.createElement("td");
+    let nameCell = document.createElement("td");
+    let scoreCell = document.createElement("td");
+
+    rankCell.textContent = index + 1;
+    nameCell.textContent = score.name;
+    scoreCell.textContent = score.score;
+
+    row.appendChild(rankCell);
+    row.appendChild(nameCell);
+    row.appendChild(scoreCell);
+    scoreTable.appendChild(row);
+});
 }
 
 //funcion principal
@@ -101,7 +143,7 @@ function destapar(id){
 
                 //aumentar buenas
                 buenas++;
-                mostarBuenas.innerHTML = `Buenas: ${buenas}`;
+                mostarBuenas.innerHTML = `👍Buenas: ${buenas}✅`;
 
                 if(buenas == 8){
                     //reproducir sonido de victoria
@@ -111,11 +153,13 @@ function destapar(id){
                     puntuacion = 100*(timer/timerInicial).toFixed(3);
                     clearInterval(tiempoRegresivoId);
                     mostarBuenas.innerHTML = `Buenas: ${buenas}👌✅`;
-                    mostrarTiempo.innerHTML = `Terminaste en:${timerInicial - timer} Segundos🕰️`;
+                    mostrarTiempo.innerHTML = `Terminaste en:${timerInicial - timer} Segundos ⏱️`;
                     mostrarMovimientos.innerHTML = `🎫turnos: ${turnos} 🙌`;
                     mostrarPuntuacion.innerHTML = `🏆Puntuacion: ${puntuacion}`;
 
                     alert("Ganaste loco!😎");
+                    saveScore();
+                    displayScores();
                 
                 }
             }else{

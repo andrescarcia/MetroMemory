@@ -93,3 +93,20 @@ max-width: 250px;
 height: 105px;
 text-align: center;
 }
+
+#ver_scores{
+background-color: rgba(50, 98, 187, 0.781);
+border: 1px solid white;
+border-radius: 8px;
+padding: 8px 20px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+font-weight: bold;
+font-size: large;
+margin: 0 auto;
+display: block;
+width: 100%;
+max-width: 250px;
+height: 105px;
+text-align: center;
+}
