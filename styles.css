@@ -22,8 +22,8 @@ h1{
     text-align: center;
 }
 button{
-    height: 100px;    
-    width: 100px;
+    height: 150px;    
+    width: 150px;
     background-color: rgba(50, 98, 187, 0.781);
     border-radius: 10%;
     font-size: 40px;
@@ -82,5 +82,6 @@ img{
     margin: 0 auto;
     display: block;
     width: 250px;
+    height: 105px;
     text-align: center;
 }

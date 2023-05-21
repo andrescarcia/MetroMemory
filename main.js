@@ -113,14 +113,13 @@ function destapar(id){
                     // calcula puntuacion
                     puntuacion = 100*(timer/timerInicial)
                     clearInterval(tiempoRegresivoId);
-                    mostarBuenas.innerHTML = `Buenas: ${buenas}👌🎶`;
-                    mostrarTiempo.innerHTML = `SUPER MAN! LO LOGRASTE EN ${timerInicial - timer} SEGUNDOS 🎉🎉🎉`;
+                    mostarBuenas.innerHTML = `Buenas: ${buenas}👌✅`;
+                    mostrarTiempo.innerHTML = `SUPER! LO LOGRASTE EN ${timerInicial - timer} SEGUNDOS 🎉`;
                     mostrarMovimientos.innerHTML = `turnos: ${turnos} 🙌`;
                     mostrarPuntuacion.innerHTML = `Puntuacion: ${puntuacion}`;
 
                     alert("Ganaste loco!😎");
-                    
-
+                
                 }
             }else{
                 //reproducir sonido de incorrecta eleccion
