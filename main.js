@@ -10,8 +10,6 @@ let temporizador = false;
 let timer = 180;
 let tiempoRegresivoId = null;
 let timerInicial = 180;
-
-//terminar ⚠️⚠️
 let puntuacion = 0;
 
 // apuntadores  a los elementos del html    
@@ -49,7 +47,6 @@ function contarTiempo(){
     },1000);
 }
 //mostramos las tarjeras si al jugador se le acaba el tiempo
-// NOTA : VER AQUI EL REINICIO ⚠️⚠️
 function bloquearTarjetas(){   
     for(let i=0; i<=15; i++){
         let tarjetaBloqueada  = document.getElementById(i);
@@ -93,7 +90,7 @@ function destapar(id){
 
             //incrementamos turnos
             turnos++;
-            mostrarMovimientos.innerHTML = `Turnos: ${turnos}`;
+            mostrarMovimientos.innerHTML = `🎫Turnos: ${turnos}`;
             
             //comparar resultados   
             if(primerResultado == segundoResultado){
@@ -111,12 +108,12 @@ function destapar(id){
                     winAudio.play();
                     //terminar juego
                     // calcula puntuacion
-                    puntuacion = 100*(timer/timerInicial)
+                    puntuacion = 100*(timer/timerInicial).toFixed(3);
                     clearInterval(tiempoRegresivoId);
                     mostarBuenas.innerHTML = `Buenas: ${buenas}👌✅`;
-                    mostrarTiempo.innerHTML = `SUPER! LO LOGRASTE EN ${timerInicial - timer} SEGUNDOS 🎉`;
-                    mostrarMovimientos.innerHTML = `turnos: ${turnos} 🙌`;
-                    mostrarPuntuacion.innerHTML = `Puntuacion: ${puntuacion}`;
+                    mostrarTiempo.innerHTML = `Terminaste en:${timerInicial - timer} Segundos🕰️`;
+                    mostrarMovimientos.innerHTML = `🎫turnos: ${turnos} 🙌`;
+                    mostrarPuntuacion.innerHTML = `🏆Puntuacion: ${puntuacion}`;
 
                     alert("Ganaste loco!😎");
                 
