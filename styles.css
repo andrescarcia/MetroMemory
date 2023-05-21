@@ -110,3 +110,33 @@ max-width: 250px;
 height: 105px;
 text-align: center;
 }
+
+.score-table {
+width: 100%;
+border-collapse: collapse;
+font-family: Arial, sans-serif;
+}
+
+.score-table thead {
+background-color: rgba(50, 98, 187, 0.781);
+}
+
+.score-table th,
+.score-table td {
+border: 1px solid #dddddd;
+padding: 8px;
+text-align: center;
+}
+
+.score-table tr:nth-child(even) {
+background-color: #3672b8;
+}
+
+.score-table tr:hover {
+background-color: #db9e43;
+}
+
+.score-table th {
+padding-top: 12px;
+padding-bottom: 12px;
+}
